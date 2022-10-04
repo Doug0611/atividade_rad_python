@@ -267,7 +267,7 @@ def operation(option: int) -> str:
                     """.strip("\t"))
                     sleep(1.5)
                     return
-                workload: int = int(input("Carga horária >>> "))
+                workload: int = int(input("Quantidade de aulas lecionadas >>> "))
                 year: str = str(input("Ano >>> ")
                                 ).strip().upper()
                 insert = settings.insert_settings(

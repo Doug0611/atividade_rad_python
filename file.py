@@ -130,7 +130,7 @@ class Report:
             else:
                 ch = int(line[8])
                 absences = int(line[5])
-                frequency = round((ch - absences) / ch * 100)
+                frequency = round(100 - ((absences / ch)* 100), 2)
                 if float(line[4]) >= 6.0 and frequency >= 75:
                     situation = "\033[1;92mAPROVADO\033[0;0m"
                 else:
@@ -173,7 +173,7 @@ class Report:
             else:
                 ch = int(line[8])
                 absences = int(line[5])
-                frequency = round((ch - absences) / ch * 100)
+                frequency = round(100 - ((absences / ch)* 100), 2)
                 if float(line[4]) >= 6.0 and frequency >= 75:
                     situation = "\033[1;92mAPROVADO\033[0;0m"
                     yield f"""
@@ -199,7 +199,7 @@ class Report:
             else:
                 ch = int(line[8])
                 absences = int(line[5])
-                frequency = round((ch - absences) / ch * 100)
+                frequency = round(100 - ((absences / ch)* 100), 2)
                 if frequency < 75:
                     situation = "\033[1;91mREPROVADO\033[0;0m"
                     yield f"""  
@@ -256,7 +256,7 @@ class Report:
             else:
                 ch = int(line[8])
                 absences = int(line[5])
-                frequency = round((ch - absences) / ch * 100)
+                frequency = round(100 - ((absences / ch)* 100), 2)
                 if float(line[4]) >= 6.0 and frequency >= 75:
                     situation = "\033[1;92mAPROVADO\033[0;0m"
                 else:
